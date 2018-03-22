@@ -1,8 +1,10 @@
+package entities;
+
 /**
  * Created by olga on 15.03.18.
  */
 
-public class Triangle extends Polygon {
+public class Triangle extends Figure {
 
     private Line lineAB;
     private Line lineCB;
@@ -17,7 +19,7 @@ public class Triangle extends Polygon {
 
 
     public Triangle(Point pointA, Point pointB, Point pointC) {
-        super();
+        super(3);
         this.pointA = pointA;
         this.pointB = pointB;
         this.pointC = pointC;
@@ -26,7 +28,7 @@ public class Triangle extends Polygon {
 
 
     public Triangle(int x1, int y1, int x2, int y2, int x3, int y3) {
-        super();
+        super(3);
         this.pointA = new Point(x1, y1);
         this.pointB = new Point(x2, y2);
         this.pointC = new Point(x3, y3);
@@ -90,13 +92,10 @@ public class Triangle extends Polygon {
 
     @Override
     public String toString() {
-        return "Triangle{" +
-                "lineAB=" + lineAB +
-                ", lineCB=" + lineCB +
-                ", lineAC=" + lineAC +
-                ", pointA=" + pointA +
-                ", pointB=" + pointB +
-                ", pointC=" + pointC +
+        return "Triangle{"  +
+                "pointA = " + pointA +
+                ", pointB = " + pointB +
+                ", pointC = " + pointC +
                 '}';
     }
 }

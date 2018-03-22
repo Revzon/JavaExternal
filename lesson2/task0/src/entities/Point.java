@@ -1,18 +1,19 @@
+package entities;
+
 /**
  * Created by olga on 15.03.18.
  */
-public class Point extends Polygon{
+public class Point extends Figure {
 
     private int x;
     private int y;
 
-    private Point() {
-
+    public Point() {
         super();
     }
 
-    Point(int x, int y){
-        super();
+    public Point(int x, int y){
+        super(1);
         this.x = x;
         this.y = y;
     }
@@ -36,8 +37,8 @@ public class Point extends Polygon{
     @Override
     public String toString() {
         return "Point{" +
-                "x=" + x +
-                ", y=" + y +
+                "x = " + x +
+                ", y = " + y +
                 '}';
     }
 }
